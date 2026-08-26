@@ -1,9 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-    // baseURL: "https://securescan-ai-1.onrender.com/api",
     baseURL: "https://securescan-ai-1.onrender.com/api",
-    timeout: 10000,
+    timeout: 60000,
     headers: {
         "Content-Type": "application/json",
     },
@@ -26,11 +25,12 @@ api.interceptors.request.use(
 // Handle unauthorized response
 api.interceptors.response.use(
     (response) => response,
-
     (error) => {
         if (error.response?.status === 401) {
             localStorage.removeItem("token");
             localStorage.removeItem("userEmail");
+            localStorage.removeItem("user");
+            localStorage.removeItem("userName");
         }
 
         return Promise.reject(error);
