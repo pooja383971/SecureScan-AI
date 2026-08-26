@@ -1,0 +1,526 @@
+/* ===============================
+   SecureScan AI Website Scanner
+=================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.scanner-page {
+
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #071223, #10243b);
+
+    padding: 40px;
+
+    color: white;
+
+}
+
+/* ===============================
+   Scanner Card
+=================================*/
+
+.scanner-card {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow: 0 0 25px rgba(0, 212, 255, .2);
+
+}
+
+.scanner-card h1 {
+
+    text-align: center;
+
+    color: #00d4ff;
+
+    margin-bottom: 10px;
+
+}
+
+.scanner-card p {
+
+    text-align: center;
+
+    color: #d1d5db;
+
+    margin-bottom: 30px;
+
+}
+
+/* ===============================
+   Input
+=================================*/
+
+.input-group {
+
+    margin-bottom: 25px;
+
+}
+
+.input-group label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-weight: 600;
+
+    color: white;
+
+}
+
+.input-group input {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    border: 2px solid transparent;
+
+    background: #16263c;
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: .3s;
+
+}
+
+.input-group input:focus {
+
+    border-color: #00d4ff;
+
+}
+
+/* ===============================
+   Scan Button
+=================================*/
+
+.scan-btn {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.scan-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 20px rgba(0, 212, 255, .5);
+
+}
+
+/* ===============================
+   Loading Card
+=================================*/
+
+.loading-card {
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    background: #16263c;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    text-align: center;
+
+}
+
+.loading-card h2 {
+
+    color: #00d4ff;
+
+    margin-bottom: 20px;
+
+}
+
+/* ===============================
+   Progress Bar
+=================================*/
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 18px;
+
+    background: #243b55;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+.progress-fill {
+
+    height: 100%;
+
+    width: 0;
+
+    background: linear-gradient(90deg, #00c6ff, #00ffcc);
+
+    transition: width .4s ease;
+
+}
+
+.loading-card h3 {
+
+    margin-top: 15px;
+
+    color: white;
+
+}
+
+/* ===============================
+   Result Card
+=================================*/
+
+.result-card {
+
+    max-width: 1200px;
+
+    margin: 35px auto;
+
+    background: #16263c;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow: 0 0 25px rgba(0, 212, 255, .2);
+
+}
+
+/* ===============================
+   Result Header
+=================================*/
+
+.result-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+.result-header h2 {
+
+    color: #00d4ff;
+
+}
+
+/* ===============================
+   Threat Badge
+=================================*/
+
+.threat-badge {
+
+    padding: 10px 22px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    color: white;
+
+}
+
+.threat-badge.low {
+
+    background: #22c55e;
+
+}
+
+.threat-badge.medium {
+
+    background: #facc15;
+
+    color: black;
+
+}
+
+.threat-badge.high {
+
+    background: #ef4444;
+
+}
+
+/* ===============================
+   Result Grid
+=================================*/
+
+.result-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 20px;
+
+}
+
+/* ===============================
+   Result Item
+=================================*/
+
+.result-item {
+
+    background: #0f172a;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    transition: .3s;
+
+}
+
+.result-item:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 15px rgba(0, 212, 255, .3);
+
+}
+
+.result-item h4 {
+
+    color: #00d4ff;
+
+    margin-bottom: 12px;
+
+}
+
+.result-item p {
+
+    color: white;
+
+}
+
+/* ===============================
+   Score Card
+=================================*/
+
+.score-card {
+
+    background: linear-gradient(135deg, #0072ff, #00d4ff);
+
+    text-align: center;
+
+}
+
+.score-card h2 {
+
+    font-size: 42px;
+
+    margin-top: 15px;
+
+}
+
+/* ===============================
+   Recommendation
+=================================*/
+
+.recommendation-card {
+
+    margin-top: 35px;
+
+    background: #0f172a;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+}
+
+.recommendation-card h3 {
+
+    color: #00d4ff;
+
+    margin-bottom: 18px;
+
+}
+
+.recommendation-card ul {
+
+    list-style: none;
+
+}
+
+.recommendation-card li {
+
+    margin-bottom: 12px;
+
+    color: #d1d5db;
+
+}
+
+/* ===============================
+   Buttons
+=================================*/
+
+.button-group {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+.download-btn {
+
+    flex: 1;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #198754;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.download-btn:hover {
+
+    background: #157347;
+
+    transform: translateY(-3px);
+
+}
+
+.scan-again-btn {
+
+    flex: 1;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #0d6efd;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.scan-again-btn:hover {
+
+    background: #0b5ed7;
+
+    transform: translateY(-3px);
+
+}
+
+/* ===============================
+   Responsive
+=================================*/
+
+@media(max-width:768px) {
+
+    .scanner-page {
+
+        padding: 20px;
+
+    }
+
+    .scanner-card {
+
+        padding: 25px;
+
+    }
+
+    .result-header {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: flex-start;
+
+    }
+
+    .button-group {
+
+        flex-direction: column;
+
+    }
+
+    .result-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

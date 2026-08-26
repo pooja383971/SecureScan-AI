@@ -1,0 +1,16 @@
+.navbar-logo {
+    cursor: pointer;
+}
+
+.nav-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    cursor: pointer;
+}

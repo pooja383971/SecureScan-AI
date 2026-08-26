@@ -1,0 +1,40 @@
+.sidebar {
+    width: 240px;
+    height: calc(100vh - 70px);
+    background: #111827;
+    color: white;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    padding-top: 20px;
+}
+
+.sidebar-title {
+    text-align: center;
+    color: #38bdf8;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 8px 0;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #1e293b;
+    color: #38bdf8;
+}

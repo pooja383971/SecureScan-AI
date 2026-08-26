@@ -1,0 +1,95 @@
+/* .setting-item{
+
+margin-top:25px;
+
+font-size:18px;
+
+}
+
+.setting-item input{
+
+margin-right:12px;
+
+transform:scale(1.2);
+
+cursor:pointer;
+
+}
+
+body.dark{
+
+background:#1e1e1e;
+
+color:white;
+
+} */
+ /* Entire page */
+body.dark-mode{
+    background:#121212;
+    color:#ffffff;
+}
+
+/* Main app */
+body.dark-mode #root{
+    background:#121212;
+}
+
+/* Header */
+body.dark-mode .header{
+    background:#1f1f1f;
+    color:white;
+}
+
+/* Sidebar */
+body.dark-mode .sidebar{
+    background:#181818;
+}
+
+body.dark-mode .sidebar a{
+    color:white;
+}
+
+body.dark-mode .sidebar a:hover{
+    background:#2d2d2d;
+}
+
+/* Main Content */
+body.dark-mode .main-content{
+    background:#121212;
+    color:white;
+}
+
+/* Cards */
+body.dark-mode .card{
+    background:#222;
+    color:white;
+}
+
+/* Tables */
+body.dark-mode table{
+    background:#1f1f1f;
+    color:white;
+}
+
+body.dark-mode th{
+    background:#333;
+}
+
+body.dark-mode td{
+    background:#222;
+}
+
+/* Inputs */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea{
+    background:#333;
+    color:white;
+    border:1px solid #555;
+}
+
+/* Buttons */
+body.dark-mode button{
+    background:#0078ff;
+    color:white;
+}

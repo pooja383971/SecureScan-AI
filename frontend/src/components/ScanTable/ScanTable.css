@@ -1,0 +1,21 @@
+.scan-table{
+    width:100%;
+    background:white;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+.scan-table th{
+    background:#1e293b;
+    color:white;
+}
+
+.scan-table th,
+.scan-table td{
+    border:1px solid #ddd;
+    padding:12px;
+}
+
+.scan-table tr:hover{
+    background:#f1f5f9;
+}

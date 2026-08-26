@@ -1,0 +1,59 @@
+.page {
+    padding: 30px;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+.report-table th {
+    background: #1f2937;
+    color: white;
+    padding: 12px;
+}
+
+.report-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.report-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.critical {
+    color: red;
+    font-weight: bold;
+}
+
+.high {
+    color: orange;
+    font-weight: bold;
+}
+
+.medium {
+    color: #c9a300;
+    font-weight: bold;
+}
+
+.low {
+    color: green;
+    font-weight: bold;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background: #b30000;
+}

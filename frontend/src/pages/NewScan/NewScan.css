@@ -1,0 +1,142 @@
+/* .newscan-content {
+    flex: 1;
+    margin-left: 250px;
+    margin-top: 80px;
+    padding: 40px;
+    background: #f4f7fc;
+    min-height: 100vh;
+}
+
+.scan-card {
+    max-width: 700px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+.scan-card h1 {
+    margin-bottom: 30px;
+    color: #1e293b;
+}
+
+.scan-card label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.scan-card input[type=text],
+.scan-card input[type=file] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+.radio-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 30px;
+}
+
+.scan-card button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.scan-card button:hover {
+    background: #1d4ed8;
+}
+
+.status-box {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #e0f2fe;
+    color: #0f172a;
+    font-weight: bold;
+} */
+ .scan-page {
+     padding: 40px;
+ }
+
+ .scan-page h1 {
+     margin-bottom: 30px;
+ }
+
+ .scan-card {
+     background: white;
+     padding: 30px;
+     border-radius: 15px;
+     max-width: 700px;
+     box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+ }
+
+ .form-group {
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 25px;
+ }
+
+ .form-group label {
+     font-weight: bold;
+     margin-bottom: 10px;
+ }
+
+ .form-group input[type=text] {
+     padding: 12px;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+ }
+
+ .form-group input[type=file] {
+     padding: 10px;
+ }
+
+ .radio-group {
+     display: flex;
+     gap: 40px;
+ }
+
+ .scan-btn {
+     width: 100%;
+     padding: 15px;
+     border: none;
+     border-radius: 10px;
+     background: #2563eb;
+     color: white;
+     font-size: 18px;
+     cursor: pointer;
+ }
+
+ .scan-btn:hover {
+     background: #1d4ed8;
+ }
+
+ .progress-section {
+     margin-top: 30px;
+ }
+
+ .progress-bar {
+     width: 100%;
+     height: 20px;
+     background: #ddd;
+     border-radius: 10px;
+     overflow: hidden;
+ }
+
+ .progress-fill {
+     height: 100%;
+     background: #16a34a;
+     width: 0%;
+     transition: .3s;
+ }
