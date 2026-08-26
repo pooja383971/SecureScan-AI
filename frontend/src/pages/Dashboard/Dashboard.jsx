@@ -1239,7 +1239,7 @@ function Dashboard() {
                         className="download-btn"
                         onClick={() =>
                           window.open(
-                            `http://localhost:8080/api/reports/${scan.id}/pdf`,
+                            `https://securescan-ai-1.onrender.com/api/reports/${scan.id}/pdf`,
                             "_blank"
                           )
                         }
