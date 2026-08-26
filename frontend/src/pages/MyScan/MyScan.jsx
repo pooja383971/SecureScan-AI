@@ -12,7 +12,7 @@ export async function loginUser(email, password) {
 
         const data = response.data;
 
-        // Save token if backend returns one
+        // Save token
         if (data.token) {
             localStorage.setItem("token", data.token);
         }
@@ -50,6 +50,7 @@ export async function loginUser(email, password) {
                 error.response?.data?.error ||
                 "Invalid email or password",
             user: null,
+            token: null,
         };
     }
 }
@@ -81,3 +82,8 @@ export async function registerUser(payload) {
         };
     }
 }
+
+export default {
+    loginUser,
+    registerUser,
+};

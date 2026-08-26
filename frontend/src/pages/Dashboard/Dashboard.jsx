@@ -1223,30 +1223,40 @@ function Dashboard() {
                     <div className="report-footer">
 
                       <button
-                        className="table-btn"
-                        onClick={() =>
-                          navigate(
-                            `/reports/${scan.id}`
-                          )
-                        }
-                      >
-
-                        View Report
-
-                      </button>
-
-                      <button
                         className="download-btn"
-                        onClick={() =>
-                          window.open(
-                            `https://securescan-ai-1.onrender.com/api/reports/${scan.id}/pdf`,
-                            "_blank"
-                          )
-                        }
+                        onClick={async () => {
+                          try {
+                            const response = await api.get(
+                              `/reports/${scan.id}/pdf`,
+                              {
+                                responseType: "blob",
+                              }
+                            );
+
+                            const fileURL = window.URL.createObjectURL(
+                              new Blob([response.data], {
+                                type: "application/pdf",
+                              })
+                            );
+
+                            const link = document.createElement("a");
+
+                            link.href = fileURL;
+                            link.download = `Security_Report_${scan.id}.pdf`;
+
+                            document.body.appendChild(link);
+                            link.click();
+                            link.remove();
+
+                            window.URL.revokeObjectURL(fileURL);
+
+                          } catch (error) {
+                            console.error("PDF Download Error:", error);
+                            alert("Failed to download PDF report.");
+                          }
+                        }}
                       >
-
                         Download PDF
-
                       </button>
 
                     </div>
