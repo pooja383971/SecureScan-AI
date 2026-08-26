@@ -6,34 +6,19 @@ import {
 
 import "react-toastify/dist/ReactToastify.css";
 
-
 function App() {
 
-
   return (
-
     <>
-
       <AppRoutes />
 
-
       <ToastContainer
-
         position="top-right"
-
         autoClose={2500}
-
         theme="colored"
-
       />
-
-
     </>
-
   );
-
-
 }
-
 
 export default App;
