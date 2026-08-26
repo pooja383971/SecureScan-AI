@@ -1,38 +1,19 @@
-// package com.securescan.backend.controller;
 
-// import com.securescan.backend.dto.WebsiteScanRequest;
-// import com.securescan.backend.dto.WebsiteScanResponse;
-// import com.securescan.backend.service.WebsiteScanService;
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.web.bind.annotation.*;
-
-// @RestController
-// @RequestMapping("/api/website")
-// @CrossOrigin(origins = "http://localhost:5173")
-// public class WebsiteScanController {
-
-//     @Autowired
-//     private WebsiteScanService websiteScanService;
-
-//     @PostMapping("/scan")
-//     public WebsiteScanResponse scanWebsite(
-//             @RequestBody WebsiteScanRequest request) {
-
-//         return websiteScanService.scanWebsite(request.getUrl());
-
-//     }
-
-// }
 package com.securescan.backend.controller;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.securescan.backend.dto.WebsiteScanRequest;
 import com.securescan.backend.dto.WebsiteScanResponse;
 import com.securescan.backend.service.WebsiteScanService;
-import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/website")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://secure-scan-ai-psi.vercel.app")
 public class WebsiteScanController {
 
     private final WebsiteScanService websiteScanService;

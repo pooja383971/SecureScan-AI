@@ -1,16 +1,20 @@
 package com.securescan.backend.controller;
 
-import com.securescan.backend.entity.Scan;
-import com.securescan.backend.repository.ScanRepository;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.securescan.backend.entity.Scan;
+import com.securescan.backend.repository.ScanRepository;
+
 @RestController
 @RequestMapping("/api/dashboard")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://secure-scan-ai-psi.vercel.app")
 public class DashboardController {
 
     private final ScanRepository scanRepository;

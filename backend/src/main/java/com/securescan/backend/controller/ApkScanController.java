@@ -1,40 +1,20 @@
-// package com.securescan.backend.controller;
-
-// import com.securescan.backend.dto.ApkScanRequest;
-// import com.securescan.backend.dto.ApkScanResponse;
-// import com.securescan.backend.service.ApkScanService;
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.web.bind.annotation.*;
-
-// @RestController
-// @RequestMapping("/api/apk")
-// @CrossOrigin(origins = "http://localhost:5173")
-// public class ApkScanController {
-
-//     @Autowired
-//     private ApkScanService apkScanService;
-
-//     @PostMapping("/scan")
-//     public ApkScanResponse scanApk(
-//             @RequestBody ApkScanRequest request) {
-
-//         return apkScanService.scanApk(request.getFileName());
-
-//     }
-
-// }
 package com.securescan.backend.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.securescan.backend.dto.ApkScanRequest;
 import com.securescan.backend.dto.ApkScanResponse;
 import com.securescan.backend.service.ApkScanService;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/apk")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://secure-scan-ai-psi.vercel.app")
 public class ApkScanController {
 
     private final ApkScanService apkScanService;
