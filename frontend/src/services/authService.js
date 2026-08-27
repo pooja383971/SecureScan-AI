@@ -1,8 +1,5 @@
 import api from "./api";
 
-// =========================
-// Login User
-// =========================
 export async function loginUser(email, password) {
     try {
         const response = await api.post("/auth/login", {
@@ -12,35 +9,11 @@ export async function loginUser(email, password) {
 
         const data = response.data;
 
-        // Save token
-        if (data.token) {
-            localStorage.setItem("token", data.token);
-        }
-
-        // Save user information
-        if (data.user) {
-            localStorage.setItem("user", JSON.stringify(data.user));
-
-            if (data.user.email) {
-                localStorage.setItem("userEmail", data.user.email);
-            }
-
-            if (data.user.fullName || data.user.name) {
-                localStorage.setItem(
-                    "userName",
-                    data.user.fullName || data.user.name
-                );
-            }
-        }
-
         return {
-            success: data.success !== false,
-            token: data.token || null,
-            message: data.message || "Login successful",
-            user: data.user || {
-                email: email,
-                name: "User",
-            },
+            success: data.success,
+            token: data.token,
+            message: data.message,
+            user: data.user,
         };
 
     } catch (error) {
@@ -51,29 +24,19 @@ export async function loginUser(email, password) {
             token: null,
             message:
                 error.response?.data?.message ||
-                error.response?.data?.error ||
-                "Invalid email or password",
+                "Login failed",
             user: null,
         };
     }
 }
 
-
-// =========================
-// Register User
-// =========================
 export async function registerUser(payload) {
     try {
-        const response = await api.post(
-            "/auth/register",
-            payload
-        );
-
-        const data = response.data;
+        const response = await api.post("/auth/register", payload);
 
         return {
-            success: data.success !== false,
-            message: data.message || "Registration successful",
+            success: response.data.success,
+            message: response.data.message,
         };
 
     } catch (error) {
@@ -83,16 +46,11 @@ export async function registerUser(payload) {
             success: false,
             message:
                 error.response?.data?.message ||
-                error.response?.data?.error ||
-                "Registration Failed",
+                "Registration failed",
         };
     }
 }
 
-
-// =========================
-// Default Export
-// =========================
 export default {
     loginUser,
     registerUser,
